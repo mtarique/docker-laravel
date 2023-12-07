@@ -1,0 +1,5 @@
+docker-compose run --rm composer create-project --prefer-dist laravel/laravel:^8.0 . // Only to create the project
+docker-compose up -d --build server
+docker-compose down
+docker-compose run --rm artisan optimize
+docker-compose run --rm artisan migrate
